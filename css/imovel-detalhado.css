@@ -1,0 +1,150 @@
+div#imovel-detalhes{
+margin: 10px;
+border-radius: 20px;
+padding: 5px;
+background: #d4d3d3;
+}
+/***********************************
+descrição do imovel
+**********************************/
+div#descricao-principal *{
+margin: 0;
+margin-top: 10px;
+padding: 0;
+}
+div#descricao-principal h2{
+color: #345196;
+font-weight: 700;
+}
+div#descricao-principal h4{
+color: #6f6d6d;
+}
+div#foto-exebicao{
+background: #c0bfc4;
+padding: 0;
+}
+/*****************************************
+descrição do imovel
+********************************************/
+div#descricao-do-imovel{
+background: #c0bfc4;
+margin: 10px auto;
+width: 800px;
+}
+div#descricao-do-imovel .col-xs-12{padding: 0}
+div#descricao-do-imovel .nav-tabs{
+padding: 3px 3px 1.2px 5px;
+text-align: center;
+background: #092d7f;
+}
+div#descricao-do-imovel .nav-tabs li{
+margin: auto 0.5%;
+}
+div#descricao-do-imovel .nav-tabs li{
+	margin: auto 0.5%;
+}
+div#descricao-do-imovel .nav-tabs li a{
+	color: white;
+	font-size: 14pt;
+	font-weight: 650;
+	padding: 5px 90px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+color: white;
+cursor: default;
+border-width: 1px;
+border-style: solid;
+border-color: #DDD #DDD transparent;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image: none;
+background-image:-moz-linear-gradient(50% 0% -180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
+background-image:-ms-linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
+background-image:linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
+}
+div#descricao-do-imovel .nav-tabs li a:hover {
+background-image:-moz-linear-gradient(50% 0% -180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
+background-image:-ms-linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
+background-image:linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
+}
+div#cEspecificacao ul{
+list-style: none;
+margin-left: -40px;
+}
+div#cEspecificacao p{
+font-weight: 700;
+}
+div#cEspecificacao span{
+color: rgb(0,154,225);
+}
+/**************************************
+FOTO PRODUTO
+****************************************/
+div#fotos-detalhes .col-xs-8{
+margin: 3px 10px;
+padding: 0;
+width: 590px;
+}
+/**************************************
+formulario
+****************************************/
+div#formulario-contato *{
+color: #345196;
+}
+div#formulario-contato {margin-top: 10px;
+width: 310px;
+background: #c0bfc4;
+border-radius: 10px;
+}
+div#formulario-contato input,textarea{
+font-size: 11pt;
+font-weight: 700;
+}
+div#formulario-contato h3{
+font-weight: 800;
+}
+div#formulario-contato button{
+color: white;
+font-weight: 700;
+}
+textarea.contato-mensagem{
+width: 100%;
+}
+/**********************
+OUTROS IMOVEIS
+*************************/
+div#outros-imoveis {
+padding: 5px;
+margin: 5px auto;
+width: 900px;
+border-radius: 10px;
+}div#outros-imoveis h2.title-kananda{
+font-weight: 800;
+font-size: 18pt;
+margin-top: 0px;
+padding: 5px;
+border-bottom: 3px solid #C4C3C8;
+color: #345196;
+}
+div#outros-imoveis .col-xs-12{
+padding: 0px;
+margin: 0px;
+}
+#slider1_container{
+width: 875px!important;
+}
+#slider1_container{
+	width: 875px!important;
+}
+.slide-container a{
+margin: 0;
+padding: 0;
+}
+.slide-container div a img{
+	border-radius: 5px;
+	margin: 0;
+	width: auto;
+	height: 170px;
+}

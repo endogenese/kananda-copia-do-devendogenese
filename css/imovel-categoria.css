@@ -1,0 +1,16 @@
+/****************************
+	IMOVEL-CATEGORIA
+***************************/
+
+div#imovel-home{
+	margin: 10px auto;
+	background: url(../img/img-imovel.png) no-repeat;
+	background-size: 820px 100%;
+	height: auto;
+}
+/****************************
+	PAGINAÇÃO
+***************************/
+ul#imovel-paginacao {
+	margin-left: 290px;
+}

@@ -1,0 +1,26 @@
+div#galeria-show{
+	margin: 0 5px;
+	margin-top: -10px;
+	padding: 2px;
+	background: rgba(19, 23, 31, 0.59);
+	border-radius: 10px;
+	width: 950px;
+}
+div#galeria-show .fotorama{
+border-radius: 0 0 10px 10px;
+padding: 0 5px 5px 5px;
+}
+p{
+	text-align: center;
+	font-size: 12pt;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
+p.class-titulo{
+	color: red;
+}
+
+p.class-data{
+	color: #6f6d6d;
+}

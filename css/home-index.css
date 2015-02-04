@@ -1,0 +1,27 @@
+div#filtro-detalhe{
+	border-radius: 10px;
+	margin: 5px 100px;
+	position: absolute;
+	top: 130px;
+	z-index: 62;
+	width: 740px;
+	background: rgba(0,0,0,.7);
+}div#filtro-detalhe *{
+	font-size: 12pt;
+	font-weight: 500;
+}div#filtro-detalhe {
+	opacity: 0.1;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	-moz-opacity: 0.2;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=0);
+
+}div#filtro-detalhe:hover {
+	-moz-opacity: 1;
+	opacity: 1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);
+}
+div#filtro-detalhe .col-xs-2{
+	width: 160px;
+}
