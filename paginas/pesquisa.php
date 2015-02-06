@@ -75,8 +75,8 @@
 
 <!--CATEGORIA DE IMOVEL-->
 
-  <div id="imovel-home">
-          <h3 class="imovel-nome">
+  <div id="lista-de-imoveis">
+          <h3 class="title-do-imovel">
             <?php
 
               if(isset($_POST['selecionaImovel'])){
@@ -92,7 +92,7 @@
                     echo 'Áreas Portuárias';
                     break;
                   case 'LOTEAMENTO':
-                    echo 'Loteamento';
+                    echo 'Loteamentos';
                     break;
                   case 'TERRENO URBANO':
                     echo 'Terrenos Urbanos';
@@ -183,17 +183,28 @@
 
 
           ?>
-            
                 <div class="col-xs-4">
-                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
-                        <div class="home-legenda-imovel">
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>" class="thumbnail">
+                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="IMOVEL DA KANANDA.IMB.BR">
+                        <div class="legenda-imovel">
                            <p><span class="icone-imovel">h</span> Quartos: <?=$value['quartos']?><br>
                              <span class="icone-imovel">x</span> Garagem: <?=$value['garagem']?><br>
-                             <span class="icone-imovel">V</span> Área: <?=$value['area_ter']?></p>
+                             <span class="icone-imovel">V</span> Área Edificada: <?=$value['area_edi']?>
+                           </p>
                         </div>
-                      </div>
+                   </a>
+                </div>
+
+                <div class="col-xs-4">
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>" class="thumbnail">
+                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="IMOVEL DA KANANDA.IMB.BR">
+                        <div class="legenda-imovel">
+                           <p>
+                             <span class="icone-imovel">V</span> Área do Terreno:  <?=$value['area_ter']?><br>
+                             <span class="glyphicon glyphicon-resize-horizontal"></span> Largura:  <?=$value['perimetro_l']?><br>
+                             <span class="glyphicon glyphicon-resize-vertical"></span> Comprimento:  <?=$value['perimetro_c']?>
+                           </p>
+                        </div>
                    </a>
                 </div>
                

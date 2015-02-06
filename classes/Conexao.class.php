@@ -8,9 +8,9 @@
 		############## PROPRIEDADES ###############
 		protected $servidor		= "localhost";
 		//protected $usuario		= "root";
-		protected $usuario		= "endog103_dev";
+		protected $usuario		= "root";
 		protected $porta		= "3306";
-		protected $senha		= "endogenese2014";
+		protected $senha		= "";
 		//protected $senha		= "";
 		protected $nomeBanco	= "endog103_kananda";
 		//protected $nomeBanco	= "kananda";

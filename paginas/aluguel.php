@@ -5,8 +5,9 @@
     <?php require RAIZ."paginas/subpaginas/buscar.php" ?>
 <!--CATEGORIA DE IMOVEL-->
 
-  <div id="imovel-home">
-          <h3 class="imovel-nome">Aluguel de Casas</h3>
+  <div id="lista-de-imoveis">
+          <h3 class="title-do-imovel">Casas para Aluguar</h3>
+          <br>
           <?php
 
             $imovel = new Objeto('produto');
@@ -39,15 +40,14 @@
           ?>
             
                 <div class="col-xs-4">
-                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
-                        <div class="home-legenda-imovel">
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>" class="thumbnail">
+                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="IMOVEL DA KANANDA.IMB.BR">
+                        <div class="legenda-imovel">
                            <p><span class="icone-imovel">h</span> Quartos: <?=$value['quartos']?><br>
                              <span class="icone-imovel">x</span> Garagem: <?=$value['garagem']?><br>
-                             <span class="icone-imovel">V</span> Área: <?=$value['area_ter']?></p>
+                             <span class="icone-imovel">V</span> Área Edificada: <?=$value['area_edi']?>
+                           </p>
                         </div>
-                      </div>
                    </a>
                 </div>
                

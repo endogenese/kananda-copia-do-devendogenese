@@ -13,9 +13,7 @@
   <meta charset="UTF-8">
   <title><?= $config['titulo_site']?></title>
   <link rel="icon" type="image/png" href="<?= RAIZ ?>img/icone-kananda.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="<?= RAIZ ?>css/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="<?= RAIZ ?>css/bootstrap/bootstrap-theme.min.css">
   <link rel="stylesheet" href="<?= RAIZ ?>css/templete.css">
   <link rel="stylesheet" href="<?= RAIZ ?>css/mapa-google.css">
   <script type="text/javascript" src="<?= RAIZ ?>js/jquery-1.11.0.js"></script>

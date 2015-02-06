@@ -60,7 +60,7 @@
 
 <!--CATEGORIA DE IMOVEL-->
 
-	<div id="imovel-home">
+	<div id="lista-de-imoveis">
           <h3 class="imovel-nome">Galeria</h3>
           <?php
 

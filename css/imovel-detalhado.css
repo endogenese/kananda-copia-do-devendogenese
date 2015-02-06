@@ -23,6 +23,11 @@ div#foto-exebicao{
 background: #c0bfc4;
 padding: 0;
 }
+.endereco-do-imovel{
+	background: #ccc;
+	position: fixed!important;
+	z-index: 10000000!important;
+}
 /*****************************************
 descrição do imovel
 ********************************************/
@@ -73,11 +78,18 @@ div#cEspecificacao ul{
 list-style: none;
 margin-left: -40px;
 }
+.td-3{
+	width: 33.34%;
+}
+table{
+	width: 100%;
+}
 div#cEspecificacao p{
-font-weight: 700;
+	font-size: 1.2em;
 }
 div#cEspecificacao span{
 color: rgb(0,154,225);
+display: block;
 }
 /**************************************
 FOTO PRODUTO

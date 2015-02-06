@@ -39,16 +39,13 @@
 
 				<!--SLIDE IMOVEL SELECIONADO-->
 				<div class="col-xs-8">
-					<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="600" data-height="400" data-max-width="100%">
+					<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="600" data-height="400" data-max-width="100%" data-allowfullscreen="true">
 						<?php
-
 							$foto_imovel->limparDados();
               				$foto_imovel->addConsulta('id_produto', $imovel['id'] );
               				$foto_imovel->selecionarTudo();
               				foreach ($foto_imovel->retornarDados() as $key => $value) {
-
 						?>
-
 					  	<a href="<?= RAIZ.$value['arquivo'] ?>"><img src="<?= RAIZ.$value['arquivo'] ?> ?>"></a>
 					  
 					  <?php
@@ -102,36 +99,50 @@
 				<!-- Tab panes -->
 					<div class="tab-content" style="padding: 5px 10px;">
 						  <div class="tab-pane fade " id="cEspecificacao">
+
 						  	<ul>
 						  		<li>
-						  			<p class="text-left">Descricao: <span><?= $imovel['descricao']?></span></p>
-						  		</li>
-						  		<li>
-						  			<p class="text-left">Referência: <span><?= $imovel['referencia']?></span></p>
-						  		</li>
-						  		<li>
-						  			<p class="text-left">Bairro: <span><?= $imovel['bairro']?></span></p>
-						  		</li>
-						  		<?php if($imovel['tipo_imovel'] == 'CASA A VENDA' || $imovel['tipo_imovel'] == 'CASA PARA ALUGAR'){?>
-						  		<li>
-						  			<p class="text-left">Quantidade de quarto(s): <span><?= $imovel['quartos']?></span></p>
-						  		</li>
-						  		<li>
-						  			<p class="text-left">Quantidade de suite(s): <span><?= $imovel['suites']?></span></p>
-						  		</li>
-						  		<li>
-						  			
-						  			<p class="text-left">Quantidade de Garagem: <span><?= $imovel['garagem']?></span></p>
-						  		</li>
+						  		<table>
+						  				<tr>
+						  			<td><p class="text-left">Tipo do Imóvel: <span><?= $imovel['tipo_imovel']?></span></p></td>
+						  			<td><p class="text-left">Finalidade: <span> <?= $imovel['finalidade']?></span></p></td>
+						  			<td><p class="text-left">Categoria: <span> <?= $imovel['categoria']?></span></p></td>
+						  		</tr>
+						  		</table>
+						  		<table>
+						  			<?php if($imovel['tipo_imovel'] == 'CASA A VENDA' || $imovel['tipo_imovel'] == 'CASA PARA ALUGAR'){?>
+						  		<tr>
+						  			<td><p class="text-left">Quartos:  <span> <?= $imovel['quartos']?></span></p></td>
+						  			<td><p class="text-left">Banheiros: <span> <?= $imovel['banheiros']?></span></p></td>
+						  			<td><p class="text-left">Suítes:  <span><?= $imovel['suites']?></span></p></td>
+						  			<td><p class="text-left">Garagem: <span> <?= $imovel['garagem']?></span></p></td>
+						  		</tr>
 						  		<?php } ?>
+						  		
+						  		<tr>
+						  			<td><p class="text-left">Área Edificada: <span> <?= $imovel['area_edi']?></span></p></td>
+						  			<td><p class="text-left">Área do Terreno:  <span> <?= $imovel['area_ter']?></span></p></td>
+						  			<td><p class="text-left"> Largura: <span> <?= $imovel['perimetro_l']?></span></p></td>
+						  			<td><p class="text-left"> Comprimento: <span> <?= $imovel['perimetro_c']?></span></p></td>
+						  		</tr>						  			
+						  				
+						  	</table>
+						  		</li>
+						  		<li>
+						  			<p class="text-left">Descrição: <span><?= $imovel['descricao']?></span></p>
+						  		</li>
 						  	</ul>
+						  	
+						  		
+						  		
 						  </div>
 						  <div class="tab-pane fade in active mapa_individual" id="mapa" style="height: 300px; width: 100%;">
 								<!-- Maps API Javascript -->
 							<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
-        						
+        						<h3 class="endereco-do-imovel"><?= $imovel['descricao']?></h3>
 						  </div>
 						  <div class="tab-pane fade " id="cVideo">
+						  	
 						  	<iframe width="100%" height="400" src="<?= (stripos($imovel['video'], 'embed')) ? $imovel['video'] : '' ?>" frameborder="0" allowfullscreen></iframe>	
 						  </div>
 					</div>
@@ -143,7 +154,7 @@
 				<div class="col-xs-12">
 					<h2 class="title-kananda">IMÓVEIS SIMILARES</h2>
 				</div>
-				<div class="col-xs-12" style="background: #C0BFC4; padding:5px;">
+				<div class="col-xs-12" style="padding:5px;">
 					<div id="slider1_container" class="container-slide">
 				        <!-- Loading Screen -->
 				        <div u="loading" class="loading-screen">

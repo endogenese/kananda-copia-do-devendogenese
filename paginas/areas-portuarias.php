@@ -5,8 +5,9 @@
     <?php require RAIZ."paginas/subpaginas/buscar.php" ?>
 <!--CATEGORIA DE IMOVEL-->
 
-	<div id="imovel-home">
-          <h3 class="imovel-nome">Áreas Portuárias</h3>
+	<div id="lista-de-imoveis">
+          <h3 class="title-do-imovel">Áreas Portuárias</h3>
+                      <br>
           <?php
 
             $imovel = new Objeto('produto');
@@ -36,17 +37,16 @@
               $foto_imovel->selecionarTudo();
               $foto = $foto_imovel->retornar();
           ?>
-            
                 <div class="col-xs-4">
-                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
-                        <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quartos: <?=$value['quartos']?><br>
-                             <span class="icone-imovel">x</span> Garagem: <?=$value['garagem']?><br>
-                             <span class="icone-imovel">V</span> Área: <?=$value['area_ter']?></p>
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>" class="thumbnail">
+                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="IMOVEL DA KANANDA.IMB.BR">
+                        <div class="legenda-imovel">
+                           <p>
+                             <span class="icone-imovel">V</span> Área do Terreno:  <?=$value['area_ter']?><br>
+                             <span class="glyphicon glyphicon-resize-horizontal"></span> Largura:  <?=$value['perimetro_l']?><br>
+                             <span class="glyphicon glyphicon-resize-vertical"></span> Comprimento:  <?=$value['perimetro_c']?>
+                           </p>
                         </div>
-                      </div>
                    </a>
                 </div>
                

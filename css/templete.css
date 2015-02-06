@@ -7,6 +7,22 @@ font-family: "breeSerif-Regular";
 src: url(../fontes/breeSerif-Regular.ttf);
 color: 
 }
+/*****************************
+
+	CLASSES & TAGS GLOBAIS
+
+******************************/
+.title-principal{
+	color: #1d3588;
+	font-weight: 700;
+}
+.a{
+	display: block;
+}
+.o{
+	display: none;
+}
+
 body{
 background:linear-gradient(top, #F0F7FD, #CFEAF5);
 background:-moz-linear-gradient(top, #F0F7FD, #CFEAF5);
@@ -23,12 +39,12 @@ font-family: "travelcons"
 .container{
 background: white;
 width: 970px!important;
-box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
--moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
--webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
 padding: 0px 5px;
 }
-/*CABECALHO*/
+
+/*****************************
+	Cabeçalho
+******************************/
 div#cabecalho{
 margin-top: 0px;
 margin-bottom: -45px;
@@ -69,7 +85,7 @@ border-radius: 5px;
 padding: 3px 20px;
 color: white;
 }
-ul#menu-head li a:hover{
+ul#menu-head li a:hover,  ul#menu-head li a:focus{
 background-image:-moz-linear-gradient(50% 0% -180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
 background-image:-ms-linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
 background-image:linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
@@ -120,10 +136,12 @@ opacity: 1;
 -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);
 }
 .form-inline{display: inline!important;}
-/*FILTRO*/
-/*******************************
-filtro
-**********************************/
+
+/*****************************
+
+	Filtro
+
+******************************/
 div#filtro-detalhe{
 background: #1a5dae;
 margin: 5px 50px;
@@ -147,25 +165,25 @@ width: 180px;
 }
 div#filtro-detalhe button{
 font-size: 12pt;
-font-weight: 700;
+letter-spacing: 0.5pt;
 }
-/*SLIDE*/
+/*****************************
+
+	SLIDE-SHOW DA HOME
+
+******************************/
 div#slideshow-home{
 margin: 5px auto;
 margin-top: 5px;
 margin-bottom: 0;
 }
 div#slideshow-home div.item div.carousel-caption{
-background: rgba(0,0,0,0.4);
 width: 100%;
 left: 4px;
 padding: 0;
 margin: 0;
 margin-left: -4px;
 margin-bottom: -20px;
-}
-div#slideshow-home:hover div.item div.carousel-caption{
-background: rgba(0,0,0,0.7);
 }
 .carousel-inner>.item{
 height: 380px;
@@ -174,7 +192,7 @@ height: 380px;
 width: 100%;
 }
 .carousel-inner>.item{
-	height: 380px;
+	height: auto;
 }
 .carousel-inner>.item>img{
 	width: 100%;
@@ -190,6 +208,7 @@ color: #345195;
 font-size: 20pt;
 }
 div#slideshow-home div.item div.carousel-caption p{
+text-shadow: 0 0 4px black;
 color: #F0F0F0;
 font-size: 12pt;
 }
@@ -201,91 +220,123 @@ margin-bottom: 0;
 height: 20px;
 width: 20%;
 }
-/******************************
-MAPA HOME
-*******************************/
+/*****************************
+
+	MAPA DA HOME
+
+******************************/
 iframe.mapa {
 width: 100%;
 height: auto;
 vertical-align: middle;
 margin-bottom: 6px;
 }
-/******************************
-IMOVEIS
-*******************************/
-div#imovel-home * {
+/*****************************
+
+	LISTAGEM DOS  IMOVEIS
+
+******************************/
+
+div#lista-de-imoveis * {
 text-decoration: none;
 }
-div#imovel-home{
-background: url('../img/img-imovel-home.png')no-repeat;
-padding: 10px;
+div#lista-de-imoveis{
+width: 870px;
+background: url('../img/mini-fundo-de-lista-imoveis.png')no-repeat;
+background-size: 850px 100%;
 margin: 5px auto;
-width: 820px;
-height: 420px;
-padding-left:25px;
+padding: 10px;
+padding-left: 30px;
 }
-div#imovel-home .col-xs-4{
-background: url('../img/imovel-select.png') no-repeat;
-width: 245px;
-margin: 25px 10px 0px 10px;
-/*padding: 17px 3px 0px 3px;*/
-padding: 0 3px;
-padding-top: 17px;
-height: 280px;
+h3.title-do-imovel{
+color: #405192;
+font-weight: 700;
+font-size: 2.3em;
+padding: 0;
+margin-top: 3px;
+margin-bottom: 10px;
 }
-div#imovel-home .col-xs-4 img{
-width: auto;
-height: 165px;
+
+div#lista-de-imoveis .col-xs-4{
+width: 32%;
 display: block;
-margin: auto;
-margin-top: 5px;
+}
+div#lista-de-imoveis .thumbnail{
+border: none;
+background: url('../img/imovel-select.png') no-repeat;
+background-size: 100% 100%;
+margin-top: 10px;
+margin-bottom: 10px;
 -moz-transition: transform 0.5s;
 transition: transform 0.5s;
 -webkit-transition: transform 0.5s;
 }
-#primeiro-imovel-select{
-margin-left: 20px;
-}
-.home-imovel *{
-color: black;
-}
-#imovel-home .col-xs-4 img:hover{
+div#lista-de-imoveis .thumbnail:hover{
 transform: scale(1.05);
 -webkit-transform: scale(1.05);
 -moz-transform: scale(1.05);
 }
-.home-legenda-imovel{
-padding: 8px;
+div#lista-de-imoveis .thumbnail img{
+padding: 20px 8px;
+padding-left: 5px;
+padding-bottom: 0;
 }
-h3.imovel-nome{
-color: #405192;
-font-weight: 700;
-font-size: 24pt;
-padding: 0;
-margin-left: 20px;
-margin-top: 3px;
-}
-h3.imovel-ver-mais{
-background-image: linear-gradient(to bottom,#2A89A5 0,#298BA8 100%);
-background-image: linear-gradient(to bottom,#2A89A5 0,#298BA8 100%);
-background-image: linear-gradient(to bottom,#2A89A5 0,#298BA8 100%);
+
+.imovel-ver-mais{
 clear: both;
 display: block;
 float: right;
-text-align: center;
-z-index: 100;
-width: 90px;	
-padding: 3px;
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-font-size: 14pt;
-margin: 0;
-margin-right: 30px;
-margin-top: 6px;
+font-size: 1.2em;
+margin-right: 50px;
+}
+
+
+
+/*************************************
+			SERVIÇOS
+*************************************/
+
+#conteudo{
+	margin: 10px;
+	padding: 5px;
+}
+.titulo-servico{
+	color: #6f6d6d;
+	font-weight: 800;
+	text-align: center;
+}
+/*****************************
+		catagoria de serviços
+******************************/
+div.categoria-servicos {
+	border-top: 2px solid #c0bfc4;
+	padding: 10px;
+	margin-bottom: 100px;
+}
+div.categoria-servicos img{
+	float: left;
+	margin-right: 10px;
+}
+div.categoria-servicos p{
+	color: #6f6d6d;
+}
+
+/******************************
+		SOBRE A EMPRESA
+*******************************/
+div#sobre-empresa{
+	border-top: 1px solid #c0bfc4;
+	padding: 10px;
+	margin-bottom: 100px;
+}
+div#sobre-empresa h2{
+	color: #1d3588;
+	font-weight: 700;
+}div#sobre-empresa p{
+	color: #6f6d6d;
 }
 /*************************************
-RODAPE
+			RODAPE
 *************************************/
 div#rodape{
 background: #405192;
@@ -354,17 +405,4 @@ transition: transform 0.5s;
 transform: scale(1.1);
 -webkit-transform: scale(1.1);
 -moz-transform: scale(1.1);
-}
-/*****************************************
-.pagination
-****************************************/
-.pagination{
-margin: 5px;
-}
-
-.a{
-	display: block;
-}
-.o{
-	display: none;
 }
