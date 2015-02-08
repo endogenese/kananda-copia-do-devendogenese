@@ -61,7 +61,7 @@
 <!--CATEGORIA DE IMOVEL-->
 
 	<div id="lista-de-imoveis">
-          <h3 class="imovel-nome">Galeria</h3>
+          <h3 class="title-do-imovel">Galeria</h3>
           <?php
 
             if($evento_obj->getLinhasAfetadas()>0){
@@ -83,14 +83,12 @@
               
           ?>
               <div class="col-xs-4">
-                  <a href="<?= RAIZ ?>galeria/<?= $value['id']?>">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
-                        <div class="home-legenda-imovel">
+                  <a href="<?= RAIZ ?>galeria/<?= $value['id']?>" class="thumbnail">
+                        <img src="<?= RAIZ.$foto['arquivo'] ?>"  alt="Galeria DA KANANDA.IMB.BR">
+                        <div class="legenda-imovel">
                             <p class="class-titulo"><?= $value['titulo_evento']?></p>
                            <p class="class-data"><?= $value['descricao_evento']?></p>
                         </div>
-                      </div>
                    </a>
                 </div>
 

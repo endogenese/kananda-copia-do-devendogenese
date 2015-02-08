@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="<?= RAIZ ?>/css/home-index.css">
+<link rel="stylesheet" href="<?= RAIZ ?>/css/home-index.css" media="all">
 <!--FILTRO-->
 <?php require RAIZ."paginas/subpaginas/buscar.php" ?>
 

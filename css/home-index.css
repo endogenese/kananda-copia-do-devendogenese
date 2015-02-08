@@ -1,5 +1,7 @@
 div#filtro-detalhe{
 	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 	margin: 5px 100px;
 	position: absolute;
 	top: 130px;
@@ -24,4 +26,10 @@ div#filtro-detalhe{
 }
 div#filtro-detalhe .col-xs-2{
 	width: 160px;
+}
+
+@media only screen and (max-width: 768px){
+	div#filtro-detalhe{
+		opacity: 1;
+	}
 }
