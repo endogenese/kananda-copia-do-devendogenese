@@ -20,9 +20,9 @@
 		<script type="text/javascript">
 		$(document).ready(function() {
 
-			$(".area").mask("9?99 m²");
+			$(".area").mask("9?99999.99 m²");
 
-			$(".metros_medida").mask("9?99 metros");
+			$(".metros_medida").mask("999.99 metros");
 
 
 			//quantidade de fotos na página de eventos
@@ -58,7 +58,7 @@
 				      label2.appendChild(document.createTextNode('Descrição da Foto'));
 				      br2 = document.createElement('br');
 				      textarea = document.createElement('textarea');
-				      textarea.setAttribute('obg','Descrição da Foto '+i);
+				      
 				      textarea.setAttribute('name','descricao_foto'+i);
 				      textarea.setAttribute('class','descrissao-slide');
 				      a = document.createElement('a');
@@ -80,7 +80,7 @@
 			  		}else{
 
 			  			fotos = document.getElementById("fotos");
-			      		fotos.innerHTML=fotos.innerHTML+"<div class='foto' id='foto"+i+"'><label>Foto</label><input class='foto-slide' name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><br><label>Descrição da Foto</label><br><textarea obg='Descrição da Foto "+i+"' name='descricao_foto"+i+"' class='descrissao-slide'></textarea><a id='slide-remover' class='btn-danger novo-slide' href='#' onclick='remover_foto(this);''>Remover</a></div>";
+			      		fotos.innerHTML=fotos.innerHTML+"<div class='foto' id='foto"+i+"'><label>Foto</label><input class='foto-slide' name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><br><label>Descrição da Foto</label><br><textarea  name='descricao_foto"+i+"' class='descrissao-slide'></textarea><a id='slide-remover' class='btn-danger novo-slide' href='#' onclick='remover_foto(this);''>Remover</a></div>";
 
 			  		}
 

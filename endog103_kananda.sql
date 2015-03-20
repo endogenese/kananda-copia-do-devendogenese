@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Máquina: localhost
--- Data de Criação: 08-Fev-2015 às 19:35
+-- Data de Criação: 20-Mar-2015 às 20:22
 -- Versão do servidor: 5.6.12-log
 -- versão do PHP: 5.4.12
 
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `empresa` (
 --
 
 INSERT INTO `empresa` (`id`, `nome`, `email`, `titulo_site`, `logotipo`, `data_cadastro`) VALUES
-(1, 'Kananda Negócios Imobiliários', 'KANANDA@KANANDA.IMB', 'Kananda Negócios Imobiliários', 'img/site/545aa415b827e.png', '2014-10-22 21:09:46');
+(1, 'Kananda Negócios Imobiliários', 'Kananda@kananda.imb.br', 'Kananda Negócios Imobiliários', 'img/site/5509d85266afe.png', '2014-10-22 21:09:46');
 
 -- --------------------------------------------------------
 
@@ -107,14 +107,15 @@ CREATE TABLE IF NOT EXISTS `evento` (
   `diretorio` varchar(100) DEFAULT NULL,
   `data_cadastro` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=89 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=93 ;
 
 --
 -- Extraindo dados da tabela `evento`
 --
 
 INSERT INTO `evento` (`id`, `titulo_evento`, `descricao_evento`, `diretorio`, `data_cadastro`) VALUES
-(88, 'Titulo', 'Descrição do evento', 'img/eventos/88-Titulo', '2015-02-05 19:27:32');
+(88, 'Titulo', 'Descrição do evento', 'img/eventos/88-Titulo', '2015-02-05 19:27:32'),
+(92, 'ra', 'reee', 'img/eventos/92-ra', '2015-03-18 20:43:28');
 
 -- --------------------------------------------------------
 
@@ -129,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `foto_evento` (
   `descricao_foto` varchar(144) NOT NULL,
   `data_cadastro` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=105 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=108 ;
 
 --
 -- Extraindo dados da tabela `foto_evento`
@@ -140,7 +141,9 @@ INSERT INTO `foto_evento` (`id`, `id_evento`, `arquivo`, `descricao_foto`, `data
 (101, 88, 'img/eventos/88-Titulo/54d3c4247d949.jpg', 'DESCRIÇÃO OBRIGATÓRIA...', '2015-02-05 19:27:32'),
 (102, 88, 'img/eventos/88-Titulo/54d3c424a0267.jpg', 'DESCRIÇÃO OBRIGATÓRIA...', '2015-02-05 19:27:32'),
 (103, 88, 'img/eventos/88-Titulo/54d3c424b5bc1.jpg', 'DESCRIÇÃO OBRIGATÓRIA...', '2015-02-05 19:27:32'),
-(104, 88, 'img/eventos/88-Titulo/54d3c424e1517.jpg', 'DESCRIÇÃO OBRIGATÓRIA...', '2015-02-05 19:27:32');
+(104, 88, 'img/eventos/88-Titulo/54d3c424e1517.jpg', 'DESCRIÇÃO OBRIGATÓRIA...', '2015-02-05 19:27:32'),
+(106, 92, 'img/eventos/92-ra/5509e370d24e5.jpg', '', '2015-03-18 20:43:28'),
+(107, 92, 'img/eventos/92-ra/5509e370db1b0.jpg', '', '2015-03-18 20:43:28');
 
 -- --------------------------------------------------------
 
@@ -154,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `foto_produto` (
   `arquivo` varchar(100) NOT NULL,
   `data_cadastro` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=46 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=49 ;
 
 --
 -- Extraindo dados da tabela `foto_produto`
@@ -188,7 +191,10 @@ INSERT INTO `foto_produto` (`id`, `id_produto`, `arquivo`, `data_cadastro`) VALU
 (42, 20, 'img/imoveis/20-332/546124f148d26.png', '2014-11-10 20:49:53'),
 (43, 20, 'img/imoveis/20-332/54612520a259b.png', '2014-11-10 20:50:40'),
 (44, 20, 'img/imoveis/20-332/54612520ba089.jpg', '2014-11-10 20:50:40'),
-(45, 25, 'img/imoveis/25-86764/54649dc1aa099.jpg', '2014-11-13 12:02:09');
+(45, 25, 'img/imoveis/25-86764/54649dc1aa099.jpg', '2014-11-13 12:02:09'),
+(46, 24, 'img/imoveis/24-1971/550ac13b82820.jpg', '2015-03-19 12:29:47'),
+(47, 24, 'img/imoveis/24-1971/550ac13b8ef14.jpg', '2015-03-19 12:29:47'),
+(48, 24, 'img/imoveis/24-1971/550c143d3688d.jpg', '2015-03-20 12:36:13');
 
 -- --------------------------------------------------------
 
@@ -251,8 +257,8 @@ INSERT INTO `produto` (`id`, `referencia`, `tipo_imovel`, `finalidade`, `quartos
 (21, 8777, 'CASA PARA ALUGAR', 'VENDA', 7, 7, '7', '7', '7', '7', NULL, NULL, 7, 7, 'CASA TERREA', '7', '7', '7', 'BELA VISTA', 'ITAITUBA', '', '7', NULL, 'img/imoveis/21-8777', '2014-11-07 22:29:19'),
 (22, 784, 'TERRENO RURAL', 'VENDA', 8, 8, '8', '8', '8', '8', '-4.223973', '-56.003494', 8, 8, 'CASA TERREA', '8', '8', '88', 'BELA VISTA', 'ITAITUBA', '', '8', '8', 'img/imoveis/22-784', '2014-11-07 22:29:53'),
 (23, 129, 'CASA A VENDA', 'VENDA', 4, 9, '9', '9', '9', '9', NULL, NULL, 9, 9, 'CASA TERREA', '9', '9', '9', 'BELA VISTA', 'ITAITUBA', '', '9', '9', 'img/imoveis/23-129', '2014-11-07 22:30:15'),
-(24, 1971, 'CASA A VENDA', 'VENDA', 7, 7, '7', '7', '7', '7', '-4.257437', '-55.994608', 7, 7, 'CASA TERREA', '7', '7', '7', 'BELA VISTA', 'ITAITUBA', '', '7', '7', 'img/imoveis/24-1971', '2014-11-07 22:30:35'),
-(25, 86764, 'TERRENO URBANO', 'VENDA', 1, 1, '1', '1', '1', '1', '-4.281578', '-56.001949', 1, 1, 'CASA TERREA', '1', '1', '1', 'BELA VISTA', 'ITAITUBA', '', '1', '1', 'img/imoveis/25-86764', '2014-11-13 12:02:09');
+(24, 1971, 'CASA A VENDA', 'VENDA', 7, 7, '151515.1', '151515.1', '111.11 metros', '111.11 metros', '-4.257437', '-55.994608', 2, 7, 'CASA TERREA', '7', '7', '7', 'BELA VISTA', 'ITAITUBA', '', '<p>7 textando plugin :D...<strong>kkkkkkkkkk</strong> ^^</p>', '7', 'img/imoveis/24-1971', '2014-11-07 22:30:35'),
+(25, 86764, 'TERRENO URBANO', 'VENDA', 1, 1, '414444.4', '444444.4', '444.44 metros', '444.44 metros', '-4.281578', '-56.001949', 1, 1, 'CASA TERREA', '1', '1', '1', 'BELA VISTA', 'ITAITUBA', '', '<p>1</p>', '1', 'img/imoveis/25-86764', '2014-11-13 12:02:09');
 
 -- --------------------------------------------------------
 
@@ -267,14 +273,17 @@ CREATE TABLE IF NOT EXISTS `slideshow` (
   `descricao` varchar(300) DEFAULT NULL,
   `data_cadastro` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=75 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=79 ;
 
 --
 -- Extraindo dados da tabela `slideshow`
 --
 
 INSERT INTO `slideshow` (`id`, `slide`, `titulo`, `descricao`, `data_cadastro`) VALUES
-(74, 'img/site/54d3bfb29c808.jpg', 'TITULO', 'DESCRIÇÃO, DESCRIÇÃO, DESCRIÇÃO, DESCRIÇÃO, DESCRIÇÃO, DESCRIÇÃO, DESCRIÇÃO, DESCRIÇÃO, DESCRIÇÃO, DESCRIÇÃO, DESCRIÇÃO, ', '2015-02-05 19:08:34');
+(75, 'img/site/5509d0bad1931.jpg', NULL, NULL, '2015-03-18 19:23:38'),
+(76, 'img/site/5509d0e216c18.jpg', NULL, NULL, '2015-03-18 19:24:18'),
+(77, 'img/site/5509d0e220b4b.jpg', NULL, NULL, '2015-03-18 19:24:18'),
+(78, 'img/site/5509d0e22a0de.jpg', NULL, NULL, '2015-03-18 19:24:18');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

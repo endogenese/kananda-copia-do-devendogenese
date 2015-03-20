@@ -13,7 +13,7 @@ function initialize() {
 	latlng = new google.maps.LatLng(-4.267027, -55.993366);
 	
     var options = {
-        zoom: 5,
+        zoom: 24,
 		center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -66,8 +66,8 @@ function carregarPontos(filtro) {
 				//google.maps.Animation.BOUNCE
 				marcadores.push(marcador);
 				var myOptions = {
-					content: "<img src='"+ponto.foto+"' class='foto_mapa'/><p>" + ponto.descricao + "<a href='"+ponto.link+"' class='link_mapa'> Veja</a></p>",
-					pixelOffset: new google.maps.Size(-150, 0)
+					content: "<img src='"+ponto.foto+"' class='foto_mapa'/><br/><p>Referencia: " + ponto.descricao + " - <a href='"+ponto.link+"' class='btn btn-success btn-sm' style='font-family:Arial;'>Veja</a></p>",
+					pixelOffset: new google.maps.Size(-180, 0)
 	        	};
 
 				infoBox[ponto.id] = new InfoBox(myOptions);
@@ -108,7 +108,7 @@ function carregarPontos(filtro) {
 				//google.maps.Animation.BOUNCE
 				marcadores.push(marcador);
 				var myOptions = {
-					content: "<img src='"+ponto.foto+"' class='foto_mapa'/><p>" + ponto.descricao + "<a href='"+ponto.link+"' class='link_mapa'> Veja</a></p>",
+					content: "<img src='"+ponto.foto+"' class='foto_mapa'/><br/><p>Referencia: " + ponto.descricao + " - <a href='"+ponto.link+"' class='btn btn-success btn-sm' style='font-family:Arial;'>Veja</a></p>",
 					pixelOffset: new google.maps.Size(-150, 0)
 	        	};
 

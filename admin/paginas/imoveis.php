@@ -1,4 +1,10 @@
-﻿ <?php
+﻿ <script src="<?= RAIZ ?>admin/js/tinymce/tinymce.min.js"></script>
+ <script type="text/javascript">
+	tinymce.init({
+	    selector: "textarea"
+	 });
+</script>
+ <?php
 
 $tabela_local = "produto";
 $mensagem_sucesso =  false;
@@ -250,7 +256,7 @@ $mensagem_erro =  false;
 				<div class="container-1">
 					<div class="container-row container-row-espc">
 						<label>Descrição: </label><br>
-						<textarea class="descrissao-slide" obg="Descrição do imóvel" name="descricao"></textarea>
+						<textarea class="descrissao-slide" obg="Descrição do imóvel" id="iDescricaoImovel" name="descricao"></textarea>
 					</div>
 				</div>
 				</div>
@@ -621,7 +627,7 @@ $mensagem_erro =  false;
 				<div class="container-1">
 					<div class="container-row container-row-espc">
 						<label>Descrição: </label><br>
-						<textarea class="descrissao-slide" obg="Descrição do imóvel" name="descricao"><?= $imovel['descricao']?></textarea>
+						<textarea class="descrissao-slide" obg="Descrição do imóvel" id="iDescricaoImovel" name="descricao"><?= $imovel['descricao']?></textarea>
 					</div>
 				</div>
 				</div>

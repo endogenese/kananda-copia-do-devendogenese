@@ -20,7 +20,6 @@
 
 <!--SLIDE SHOW OUTRO IMOVEIS-->
 	<link rel="stylesheet" href="<?= RAIZ ?>paginas/imovel/css/jssor.css">
-    
     <script type="text/javascript" src="<?= RAIZ ?>paginas/imovel/js/jssor.js"></script>
     <script type="text/javascript" src="<?= RAIZ ?>paginas/imovel/js/jssor.slider.min.js"></script>
     <script src="<?= RAIZ ?>paginas/imovel/js/jssor-effect.js"></script>
@@ -37,6 +36,9 @@
 					<h2>Referência: <?= $imovel['referencia']?></h2>
 				</div>
 
+			
+			<div class="col-xs-12">
+			<div class="row">
 				<!--SLIDE IMOVEL SELECIONADO-->
 				<div class="col-xs-8">
 					<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="600" data-height="400" data-max-width="100%" data-allowfullscreen="true">
@@ -87,6 +89,8 @@
 		              </div>
 		          </form>
 				</div> <!--FIM DO FORMULARIO-->
+			</div>	
+			</div>
 			</div>
 			<!--DESCRIÇÃO DO IMOVEL-->
 			<div class="row" id="descricao-do-imovel">
@@ -100,38 +104,35 @@
 					<div class="tab-content" style="padding: 5px 10px;">
 						  <div class="tab-pane fade " id="cEspecificacao">
 
-						  	<ul>
-						  		<li>
-						  		<table>
-						  				<tr>
-						  			<td><p class="text-left">Tipo do Imóvel: <span><?= $imovel['tipo_imovel']?></span></p></td>
-						  			<td><p class="text-left">Finalidade: <span> <?= $imovel['finalidade']?></span></p></td>
-						  			<td><p class="text-left">Categoria: <span> <?= $imovel['categoria']?></span></p></td>
-						  		</tr>
-						  		</table>
-						  		<table>
-						  			<?php if($imovel['tipo_imovel'] == 'CASA A VENDA' || $imovel['tipo_imovel'] == 'CASA PARA ALUGAR'){?>
-						  		<tr>
-						  			<td><p class="text-left">Quartos:  <span> <?= $imovel['quartos']?></span></p></td>
-						  			<td><p class="text-left">Banheiros: <span> <?= $imovel['banheiros']?></span></p></td>
-						  			<td><p class="text-left">Suítes:  <span><?= $imovel['suites']?></span></p></td>
-						  			<td><p class="text-left">Garagem: <span> <?= $imovel['garagem']?></span></p></td>
-						  		</tr>
-						  		<?php } ?>
-						  		
-						  		<tr>
-						  			<td><p class="text-left">Área Edificada: <span> <?= $imovel['area_edi']?></span></p></td>
-						  			<td><p class="text-left">Área do Terreno:  <span> <?= $imovel['area_ter']?></span></p></td>
-						  			<td><p class="text-left"> Largura: <span> <?= $imovel['perimetro_l']?></span></p></td>
-						  			<td><p class="text-left"> Comprimento: <span> <?= $imovel['perimetro_c']?></span></p></td>
-						  		</tr>						  			
-						  				
-						  	</table>
-						  		</li>
-						  		<li>
-						  			<p class="text-left">Descrição: <span><?= $imovel['descricao']?></span></p>
-						  		</li>
-						  	</ul>
+							<ul class="lista-detalhes-imovel">
+
+							<li><p class="text-left">Tipo do Imóvel: <span><?= $imovel['tipo_imovel']?></span></p></td>
+							<li><p class="text-left">Finalidade: <span> <?= $imovel['finalidade']?></span></p></td>
+							<li><p class="text-left">Categoria: <span> <?= $imovel['categoria']?></span></p></td>
+
+							<?php if($imovel['tipo_imovel'] == 'CASA A VENDA' || $imovel['tipo_imovel'] == 'CASA PARA ALUGAR') : ?>
+								<?php if($imovel['quartos']){ echo '<li><p class="text-left">Quartos:  <span>'.$imovel['quartos'].'</span></p></li>';} ?>
+								<?php if($imovel['banheiros']){ echo '<li><p class="text-left">Banheiros:  <span>'.$imovel['banheiros'].'</span></p></li>';} ?>
+								<?php if($imovel['suites']){ echo '<li><p class="text-left">Suítes:  <span>'.$imovel['suites'].'</span></p></li>';} ?>
+								<?php if(count($imovel['garagem']) > 0){ echo '<li><p class="text-left">Garagem:  <span>'.$imovel['garagem'].'</span></p></li>';} ?>
+							<?php endif; ?>
+
+							<li><p class="text-left">Área Edificada: <span> <?= $imovel['area_edi']?></span></p></td>
+							<li><p class="text-left">Área do Terreno:  <span> <?= $imovel['area_ter']?></span></p></td>
+							<li><p class="text-left"> Largura: <span> <?= $imovel['perimetro_l']?></span></p></td>
+							<li><p class="text-left"> Comprimento: <span> <?= $imovel['perimetro_c']?></span></p></td>					  			
+								
+							</li>
+							<li class="desc">
+							<p class="text-left">Endereço: <span><?= $imovel['logradouro']?> nº <?= $imovel['num']?> - Bairro <?= $imovel['bairro']?> - <?= $imovel['cidade']?><?php if($imovel['uf']) { echo "/".$imovel['uf']; } ?> </span></p>
+							</li>
+							<li class="desc">
+							<p class="text-left">Descrição:</p>
+							</li>
+							<li class="desca">
+								<?= $imovel['descricao']?>
+							</li>
+							</ul>
 						  	
 						  		
 						  		
@@ -139,7 +140,6 @@
 						  <div class="tab-pane fade in active mapa_individual" id="mapa" style="height: 300px; width: 100%;">
 								<!-- Maps API Javascript -->
 							<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
-        						<h3 class="endereco-do-imovel"><?= $imovel['descricao']?></h3>
 						  </div>
 						  <div class="tab-pane fade " id="cVideo">
 						  	
@@ -222,3 +222,10 @@
 		header('location: '.RAIZ);
 	}
 ?>
+  <script src="<?= RAIZ ?>js/jquery_2.1.1.min.js"></script>
+  <script src="<?= RAIZ ?>js/infobox.js"></script>
+  <script src="<?= RAIZ ?>js/markerclusterer.js"></script>
+  <script src="<?= RAIZ ?>js/mapa.js"></script>
+  <script>
+  	$(".mapa_individual").on("load", carregarPonto(imovel));
+  </script>

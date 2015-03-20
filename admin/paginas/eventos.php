@@ -107,7 +107,7 @@ $mensagem_erro =  false;
 							<img id='preview1' src='#' class='preview_foto'/><br>
 
 							<label>Descrição da Foto:</label><br>
-							<textarea obg="Descrição da Foto 1" name="descricao_foto1" class="descrissao-slide"></textarea>
+							<textarea  name="descricao_foto1" class="descrissao-slide"></textarea>
 							<a id="slide-remover" class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
 						</div>
@@ -320,7 +320,7 @@ $mensagem_erro =  false;
 							<input class="foto-slide" name="foto<?=$i ?>" type="file" onchange="readURL(this);" />
 							<img id='preview<?=$i ?>' src="<?= RAIZ.$foto['arquivo'] ?>" class='preview_foto'/><br>
 
-							<label>Descrição da Foto: </label><br><textarea obg="Descrição da Foto <?=$i ?>" name="descricao_foto<?=$i ?>" class="descrissao-slide"><?= $foto['descricao_foto'] ?></textarea>
+							<label>Descrição da Foto: </label><br><textarea  name="descricao_foto<?=$i ?>" class="descrissao-slide"><?= $foto['descricao_foto'] ?></textarea>
 							<a id="slide-remover" class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
 						</div>

@@ -199,7 +199,7 @@
     if($imovel->getLinhasAfetadas()>0){
   ?>
   <div id="lista-de-imoveis">
-          <h3 class="title-do-imovel">Terreno Urbano</h3>
+          <h3 class="title-do-imovel">Terrenos Urbanos</h3>
             <div class="row">
               <?php
 
@@ -242,7 +242,7 @@
     if($imovel->getLinhasAfetadas()>0){
   ?>
   <div id="lista-de-imoveis">
-          <h3 class="title-do-imovel">Terreno Rural</h3>
+          <h3 class="title-do-imovel">Terrenos Rurais</h3>
             <div class="row">
               <?php
 
@@ -284,7 +284,7 @@
     if($imovel->getLinhasAfetadas()>0){
   ?>
   <div id="lista-de-imoveis">
-          <h3 class="title-do-imovel">Áreas Portuária</h3>
+          <h3 class="title-do-imovel">Áreas Portuárias</h3>
             <div class="row">
               <?php
 

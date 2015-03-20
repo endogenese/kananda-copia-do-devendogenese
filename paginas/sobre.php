@@ -1,8 +1,6 @@
 
 <div class="row" id="conteudo">
-	<div class="col-xs-12">
-
-		
+	<div class="col-xs-12">	
 			<div class="row">
 				<div class="col-xs-12">
 					<h1 class="titulo-servico">Sobre nós</h1>
@@ -21,5 +19,4 @@
 				
 			</div>
 	</div>
-
 </div>

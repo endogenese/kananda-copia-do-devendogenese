@@ -1,5 +1,4 @@
 ﻿
-	<link rel="stylesheet" href="<?= RAIZ ?>/css/mapa.css">
 	<!--CONTATO-->
 	<div class="row">
 		<div class="col-xs-12">
@@ -71,3 +70,11 @@
 			</div>
 		</div>
 	</div>
+
+<script src="<?= RAIZ ?>js/jquery_2.1.1.min.js"></script>
+<script src="<?= RAIZ ?>js/infobox.js"></script>
+<script src="<?= RAIZ ?>js/markerclusterer.js"></script>
+<script src="<?= RAIZ ?>js/mapa.js"></script>
+<script>
+	 $(".pagina_mapa").on("load", carregarPontos('*'));
+</script>

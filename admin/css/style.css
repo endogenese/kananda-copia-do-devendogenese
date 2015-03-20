@@ -194,8 +194,6 @@ padding-left: 10px;
 	background: rgb(81, 188, 213);
 }
 
-.titulo, .subtitulo {
-}
 
 #conteudo-geral #topo-sidebar .subtitulo a {
 	color: #000;
@@ -253,9 +251,6 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff269dfa,endCol
 }
 #conteudo-geral #sidebar #menu-lateral li:hover {
 	background-color: #2382D3;
-	transform: scale(1.03);
-	-webkit-transform: scale(1.03);
-	-moz-transform: scale(1.03);
 }
 #conteudo-geral #sidebar #menu-lateral  a{
 	text-decoration: none;

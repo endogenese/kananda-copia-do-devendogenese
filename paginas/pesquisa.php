@@ -183,6 +183,10 @@
 
 
           ?>
+  
+                
+          <?php if($value['tipo_imovel'] == 'CASA A VENDA' || $value['tipo_imovel']  == 'CASA PARA ALUGAR') { ?>
+
                 <div class="col-xs-4">
                   <a href="<?= RAIZ ?>imovel/<?= $value['id']?>" class="thumbnail">
                         <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="IMOVEL DA KANANDA.IMB.BR">
@@ -194,7 +198,8 @@
                         </div>
                    </a>
                 </div>
-
+              <?php }else { ?>
+                
                 <div class="col-xs-4">
                   <a href="<?= RAIZ ?>imovel/<?= $value['id']?>" class="thumbnail">
                         <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="IMOVEL DA KANANDA.IMB.BR">
@@ -207,7 +212,7 @@
                         </div>
                    </a>
                 </div>
-               
+                <?php } ?>
           <?php
 
             if(($i % 3 == 0) || $i == $imovel->getLinhasAfetadas())
