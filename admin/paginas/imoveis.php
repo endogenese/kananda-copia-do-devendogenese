@@ -789,6 +789,7 @@ $mensagem_erro =  false;
 
 		foreach ($tabela->retornarDados() as $key => $value) {
 			$pontos[$i]['id'] = $value['id'];
+			$pontos[$i]['referencia'] = $value['referencia'];
 			$pontos[$i]['latitude'] = $value['latitude'];
 			$pontos[$i]['longitude'] = $value['longitude'];
 			$pontos[$i]['tipo_imovel'] = $value['tipo_imovel'];

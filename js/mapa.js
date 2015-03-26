@@ -66,7 +66,7 @@ function carregarPontos(filtro) {
 				//google.maps.Animation.BOUNCE
 				marcadores.push(marcador);
 				var myOptions = {
-					content: "<img src='"+ponto.foto+"' class='foto_mapa'/><br/><p>Referencia: " + ponto.descricao + " - <a href='"+ponto.link+"' class='btn btn-success btn-sm' style='font-family:Arial;'>Veja</a></p>",
+					content: "<img src='"+ponto.foto+"' class='foto_mapa'/><br/><p style=''>Referência: <b>" + ponto.referencia + "</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='"+ponto.link+"' class='btn btn-success btn-sm' style='font-family:Arial;'>Veja</a></p>",
 					pixelOffset: new google.maps.Size(-180, 0)
 	        	};
 
