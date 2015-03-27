@@ -137,13 +137,14 @@ function carregarPontos(filtro) {
 			  });
 			marcadores.push(marcador);
 			latlngbounds.extend(marcador.position);
-			map.setZoom(14);
+			map.setZoom(13);
 			apagar_marcadores();
+			alert('Não há imóveis em :'+filtro);
 			
 		}else{	
 		
 			map.fitBounds(latlngbounds);
-			map.setZoom(17);
+			map.setZoom(13);
 
 		}
 		//var markerCluster = new MarkerClusterer(map, markers);
