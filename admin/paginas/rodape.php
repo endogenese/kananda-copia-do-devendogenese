@@ -20,9 +20,38 @@
 		<script type="text/javascript">
 		$(document).ready(function() {
 
-			$(".area").mask("9?99999.99 m²");
+			//$(".area").mask("9* m²");
+			//$(".metros_medida").mask("999.99 metros");
 
-			$(".metros_medida").mask("999.99 metros");
+			// VERIFICA SE O VALOR DO CAMPOS COM AS CLASSES AREA E METROS_MEDIDA SÃO NUMERÉICOS. CONCATENA UNIDADE DE MEDIDA
+			$(".area, .metros_medida").on('change',function(e){
+
+				var valida_unidade = $(this).val();
+
+				if(!$.isNumeric($(this).val())){
+
+					if(valida_unidade.indexOf('m²') != -1)
+						valida_unidade = valida_unidade.replace('m²', '');
+					else if(valida_unidade.indexOf('metros') != -1)
+						valida_unidade = valida_unidade.replace('metros', '');
+					else{
+
+						alert("Valor da '"+$(this).attr('name')+"' inválido!");
+						return false;
+					}
+
+					if(!$.isNumeric(valida_unidade)){
+						alert("Valor da '"+$(this).attr('name')+"' inválido!");
+						return false;
+					}
+
+				}else{
+					if($(this).hasClass('area'))
+						$(this).val($(this).val() + ' m²');
+					else if($(this).hasClass('metros_medida'))
+						$(this).val($(this).val() + ' metros');
+				}
+			});
 
 
 			//quantidade de fotos na página de eventos
