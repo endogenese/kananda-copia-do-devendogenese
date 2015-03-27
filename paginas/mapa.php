@@ -35,7 +35,7 @@
 							<label for="cBairro" class="col-xs-1 col-xs-offset-2 control-label">Bairro:</label>
 							<div class="col-xs-5">
 								<select name="select" id="selecionaBairro" class="form-control" onChange='aplica_filtro_bairro(this);'>
-									<option value="qualquer" selected>Qualquer Bairro</option>
+									<option value="*" selected>Qualquer Bairro</option>
 									<option value="BELA VISTA">Bela Vista</option>
 				                    <option value="BOA ESPERANÇA">Boa Esperança</option>
 				                    <option value="BOM JARDIM">Bom Jardim</option>
